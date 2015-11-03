@@ -1,0 +1,23 @@
+{% load bootstrap3 %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    {% bootstrap_css %}
+    <title></title>
+</head>
+<body>
+{# Комментарий #}
+{#  #}
+Мой цвет {{ fav_color|truncatewords:2 }}
+{% ifequal fav_color 'green' %}
+Да, цвет равен green
+{% else %}
+Нет, не равен green<br>
+{% endifequal %}
+Цвета:<ul>
+{% for color in fav_color %}
+    <li>{{ color }}</li>
+{% endfor %}</ul>
+</body>
+</html>

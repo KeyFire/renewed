@@ -1,0 +1,30 @@
+{% load bootstrap3 %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    {% bootstrap_css %}
+    <script type="text/javascript" src="{% bootstrap_jquery_url %}"></script>
+    <style type="text/css">body { padding-top: 45px;} nav.navbar-fixed-top{ opacity: 0.9; }</style>
+    <title>{{ title }}</title>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="/">Практикум на Python+Django. Работа с ошибками</a>
+   </div>
+  </div>
+</nav>
+<div class="container bs-docs-container">
+<div class="row">
+<div class="col-md-12" role="main">
+<h2>{{ header }} {% block school %}{% endblock %}</h2>
+    {% block content %}{% endblock %}
+<br><a href="/">На главную</a>
+</div></div>
+</div>
+
+</body>
+</html>
