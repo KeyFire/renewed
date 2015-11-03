@@ -3,6 +3,7 @@ import os
 
 import local_settings
 
+
 BASE_DIR = local_settings.BASE_DIR
 
 # Quick-start development settings - unsuitable for production
