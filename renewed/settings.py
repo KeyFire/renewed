@@ -47,6 +47,7 @@ INSTALLED_APPS = (
     'art2',
     'favorite',
     'saas',
+    'modelsform',
 )
 
 INSTALLED_APPS += (
