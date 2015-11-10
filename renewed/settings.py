@@ -42,6 +42,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'debug_toolbar',
     'bootstrap3',
+    'crispy_forms',
     'index',
     'art1',
     'art2',
@@ -130,3 +131,7 @@ TEMPLATES = [
         },
     },
 ]
+
+# crispy-forms
+CRISPY_TEMPLATE_PACK = "bootstrap3"
+# End crispy-forms

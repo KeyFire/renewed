@@ -1,12 +1,17 @@
 {% extends 'base.html' %}
-{% load staticfiles %}
 {% load bootstrap3 %}
+{% load crispy_forms_tags %}
+
 {% block content %}
 <form action="/model/" method="POST">
-    {% csrf_token %}
-    {% bootstrap_form form %}
-    {% buttons %}
-        <button type="submit" class="btn btn-primary">Отправить</button>
-    {% endbuttons %}
+{% csrf_token %}
+{% bootstrap_form form %}
+    <button type="submit" class="btn btn-primary" value="Отправить">Отправитьk</button>
+</form>
+
+<form action="/model/" method="POST">
+{% csrf_token %}
+{{ form|crispy }}
+    <input type="submit" class="btn btn-primary" value="Отправить" />
 </form>
 {% endblock %}
